@@ -64,6 +64,16 @@ public class Date {
             return nextDate;
         }
         //输入不合法
-        return null;
+        return new Date();
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (!(obj instanceof Date)) {
+            return false;
+        }
+        Date date = (Date)obj;
+        return date.year == year && date.month == month && date.day == day;
     }
 }
