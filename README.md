@@ -6,10 +6,10 @@
 
 用例设计：
 
-- [x] 一般边界值分析
-- [ ] 一般最坏情况边界值
-- [ ] 健壮边界值
-- [ ] 健壮最坏情况边界值
+- [x] [一般边界值分析](https://github.com/MandyXue/Software-Testing/blob/master/TestCases/BoundaryValueAnalysis1.csv)
+- [x] [一般最坏情况边界值](https://github.com/MandyXue/Software-Testing/blob/master/TestCases/BoundaryValueAnalysis2.csv)
+- [x] [健壮边界值](https://github.com/MandyXue/Software-Testing/blob/master/TestCases/BoundaryValueAnalysis3.csv)
+- [x] [健壮最坏情况边界值](https://github.com/MandyXue/Software-Testing/blob/master/TestCases/BoundaryValueAnalysis4.csv) （这里与一般最坏重复的部分没有写在表格里）
 
 ### 等价类分析法
 
