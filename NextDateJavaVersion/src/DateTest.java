@@ -16,7 +16,14 @@ public class DateTest {
     @org.junit.Test
     public void testGetNextDate() throws Exception {
         // 边界值分析法测试用例
-        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis.csv", ',', Charset.forName("GBK"));
+        // 基本边界值法
+//        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis1.csv", ',', Charset.forName("GBK"));
+        // 最坏情况边界值法
+        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis2.csv", ',', Charset.forName("GBK"));
+        // 健壮性边界值法
+//        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis3.csv", ',', Charset.forName("GBK"));
+        // 健壮最坏边界值法
+//        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis4.csv", ',', Charset.forName("GBK"));
         reader.readHeaders();
         while (reader.readRecord()) {
             int year = Integer.parseInt(reader.get("year"));
@@ -27,12 +34,15 @@ public class DateTest {
             int nextday = Integer.parseInt(reader.get("nextday"));
 
             Date date = new Date(year, month, day);
-            Date nextdate = new Date(nextyear, nextmonth, nextday);
+            Date expectedResult = new Date(nextyear, nextmonth, nextday);
+            Date actualResult = date.getNextDate();
 
-//            System.out.println(year + "/" + month + "/" + day);
-//            System.out.println("nextdate: " + nextdate.year + "/" + nextdate.month + "/" + nextdate.day);
-
-            assertEquals(date.getNextDate(),nextdate);
+            if (!actualResult.equals(expectedResult)) {
+                System.out.println("date: " + date.year + "/" + date.month + "/" + date.day);
+                System.out.println("expected: " + expectedResult.year + "/" + expectedResult.month + "/" + expectedResult.day);
+                System.out.println("actual: " + actualResult.year + "/" + actualResult.month + "/" + actualResult.day);
+            }
+            assertEquals(actualResult, expectedResult);
         }
     }
 }

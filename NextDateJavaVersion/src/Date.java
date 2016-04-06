@@ -17,10 +17,10 @@ public class Date {
             return;
         }
         //闰年的情况,修改dayOfMonth,其他情况则不变
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            if (month == 2) {
-                dayOfMonth[month-1] = 29;
-            }
+        if (((year % 4 == 0) && (year % 100 != 0))|| year % 400 == 0) {
+            dayOfMonth[1] = 29;
+        } else {
+            dayOfMonth[1] = 28;
         }
 
         //检查month是否符合要求
@@ -46,6 +46,10 @@ public class Date {
             if (day == dayOfMonth[month-1]) {
                 //如果是年末
                 if (month == 12) {
+                    if (year == 3000) {
+                        //世界末日没有明天
+                        return nextDate;
+                    }
                     nextDate.year = this.year + 1;
                     nextDate.month = 1;
                     nextDate.day = 1;
