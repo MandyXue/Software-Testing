@@ -19,9 +19,9 @@ public class DateTest {
         // 基本边界值法
 //        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis1.csv", ',', Charset.forName("GBK"));
         // 最坏情况边界值法
-        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis2.csv", ',', Charset.forName("GBK"));
+//        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis2.csv", ',', Charset.forName("GBK"));
         // 健壮性边界值法
-//        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis3.csv", ',', Charset.forName("GBK"));
+        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis3.csv", ',', Charset.forName("GBK"));
         // 健壮最坏边界值法
 //        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis4.csv", ',', Charset.forName("GBK"));
         reader.readHeaders();
