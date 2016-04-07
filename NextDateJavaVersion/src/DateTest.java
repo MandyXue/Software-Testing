@@ -25,7 +25,9 @@ public class DateTest {
         // 健壮最坏边界值法
 //        CsvReader reader = new CsvReader("../TestCases/BoundaryValueAnalysis4.csv", ',', Charset.forName("GBK"));
         // 弱一般等价类
-        CsvReader reader = new CsvReader("../TestCases/EquivalenceClass1.csv", ',', Charset.forName("GBK"));
+//        CsvReader reader = new CsvReader("../TestCases/EquivalenceClass1.csv", ',', Charset.forName("GBK"));
+        // 强一般等价类
+        CsvReader reader = new CsvReader("../TestCases/EquivalenceClass2.csv", ',', Charset.forName("GBK"));
         reader.readHeaders();
         while (reader.readRecord()) {
             int year = Integer.parseInt(reader.get("year"));
