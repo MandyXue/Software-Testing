@@ -11,7 +11,7 @@ import MBProgressHUD
 
 class ViewController: UIViewController,UITextFieldDelegate{
 
-    let calculator = CalculateTopUp()
+
     
     @IBOutlet weak var MinutesInput: UITextField!
     @IBOutlet weak var DebtTimeInput: UITextField!
@@ -23,6 +23,8 @@ class ViewController: UIViewController,UITextFieldDelegate{
     @IBOutlet weak var DistanceToFirst: NSLayoutConstraint!
     @IBOutlet weak var DistanceToSecond: NSLayoutConstraint!
     
+    let calculator = CalculateTopUp()
+    var bound:CGFloat? = 160
     
     var result:Double = 0.0
     {
@@ -66,7 +68,6 @@ class ViewController: UIViewController,UITextFieldDelegate{
                 })
 
             }))
-            self.SumbitButton.enabled = true
             alert.addAction(UIAlertAction(title: "取消", style: .Cancel, handler: nil))
             presentViewController(alert, animated: true, completion: nil)
             
@@ -108,8 +109,7 @@ class ViewController: UIViewController,UITextFieldDelegate{
     
     
     @IBAction func Submit() {
-        
-        let bounds = self.SumbitButton.bounds
+        let bounds = SumbitButton.bounds
         UIView.animateWithDuration(1.0,
                                    delay: 0,
                                    usingSpringWithDamping: 0.2,
@@ -117,9 +117,9 @@ class ViewController: UIViewController,UITextFieldDelegate{
                                    options: .CurveLinear,
                                    animations: { () -> Void in
                                     self.SumbitButton.bounds = CGRect(x: bounds.origin.x - 20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
-                                    self.SumbitButton.enabled = false
             },
                                    completion: nil)
+        SumbitButton.bounds.size.width -= 60
         
         guard let minutes = Int(MinutesInput.text!) where minutes > 0
         else
