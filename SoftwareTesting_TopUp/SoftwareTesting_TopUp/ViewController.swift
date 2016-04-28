@@ -121,7 +121,7 @@ class ViewController: UIViewController,UITextFieldDelegate{
                                    completion: nil)
         SumbitButton.bounds.size.width -= 60
         
-        guard let minutes = Int(MinutesInput.text!) where minutes > 0
+        guard let minutes = Int(MinutesInput.text!) where minutes > 0 && minutes <= 43200
         else
         {
             let alert = UIAlertController(title: "Invalid Input", message: "", preferredStyle: .Alert)

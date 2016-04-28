@@ -65,7 +65,7 @@ public class CalculateTopUp {
             }
             else
             {
-                return normalPay(minutes)
+                return normalPay(minutes)+lastYearDebt*0.05
             }
         }
         else

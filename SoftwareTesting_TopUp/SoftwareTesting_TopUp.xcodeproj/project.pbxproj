@@ -16,6 +16,7 @@
 		E76435991CD1972000B3B091 /* SoftwareTesting_TopUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76435981CD1972000B3B091 /* SoftwareTesting_TopUpTests.swift */; };
 		E76435A41CD1972000B3B091 /* SoftwareTesting_TopUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76435A31CD1972000B3B091 /* SoftwareTesting_TopUpUITests.swift */; };
 		E76435B21CD1977200B3B091 /* CalculateTopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76435B11CD1977200B3B091 /* CalculateTopUp.swift */; };
+		E791F9401CD25617006AA99D /* testCases.csv in Resources */ = {isa = PBXBuildFile; fileRef = E791F93F1CD25617006AA99D /* testCases.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		E76435A31CD1972000B3B091 /* SoftwareTesting_TopUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareTesting_TopUpUITests.swift; sourceTree = "<group>"; };
 		E76435A51CD1972000B3B091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E76435B11CD1977200B3B091 /* CalculateTopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateTopUp.swift; sourceTree = "<group>"; };
+		E791F93F1CD25617006AA99D /* testCases.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testCases.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				E764358A1CD1972000B3B091 /* Assets.xcassets */,
 				E764358C1CD1972000B3B091 /* LaunchScreen.storyboard */,
 				E764358F1CD1972000B3B091 /* Info.plist */,
+				E791F93F1CD25617006AA99D /* testCases.csv */,
 			);
 			path = SoftwareTesting_TopUp;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				E764358E1CD1972000B3B091 /* LaunchScreen.storyboard in Resources */,
 				E764358B1CD1972000B3B091 /* Assets.xcassets in Resources */,
+				E791F9401CD25617006AA99D /* testCases.csv in Resources */,
 				E76435891CD1972000B3B091 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
