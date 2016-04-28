@@ -68,3 +68,8 @@ crashlytics-build.properties
 # target
 target/
 /target/
+
+# Swift Igonre 
+
+SoftwareTesting_TopUp/Pods
+SoftwareTesting_TopUp/Podfile.lock 
